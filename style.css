@@ -1,33 +1,3 @@
-.declaration-order {
-  /* Positioning */
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 100;
-
-  /* Box-model */
-  display: block;
-  float: right;
-  width: 100px;
-  height: 100px;
-
-  /* Typography */
-  font: normal 13px 'Helvetica Neue', sans-serif;
-  line-height: 1.5;
-  color: #333;
-  text-align: center;
-
-  /* Visual */
-  background-color: #f5f5f5;
-  border: 1px solid #e5e5e5;
-  border-radius: 3px;
-
-  /* Misc */
-  opacity: 1;
-}
-
 * {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -116,6 +86,12 @@ figcaption h1 {
   text-align: right;
 }
 
+@media only screen and (max-width: 600px) {
+  .quotation {
+    width: 50%;
+  }
+}
+
 /* Parallax Effect */
 .parallax {
   min-height: 500px;
@@ -140,7 +116,6 @@ figcaption h1 {
 
 .parallax-img-2 {
   background-image: url(./images/phases_of_the_moon.jpg);
-  /* animation: horizontal-side-to-side 5s infinite linear;A */
 }
 
 /* Articles and parallax images */
@@ -169,22 +144,24 @@ footer {
 
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+  padding-bottom: 10px;
 
   background-color: black;
 }
 
-footer h3 {
-  background-color: red;
+.footer-title {
   flex: 2 1 100%;
   margin: 0;
   padding: 0;
-  color: white;
   text-align: center;
+
+  color: white;
 }
 
-footer ul {
+.footer-external-links {
   align-items: center;
   display: flex;
   flex: 2 1 100%;
@@ -194,8 +171,17 @@ footer ul {
   list-style-type: none;
 }
 
-a {
+.footer-external-links a {
   color: white;
   font-weight: 500;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer-external-links {
+    flex-direction: column;
+  }
+  .footer-external-links li {
+    margin: 10px;
+  }
 }
