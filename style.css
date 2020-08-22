@@ -119,7 +119,7 @@ figcaption h1 {
 }
 
 /* Articles and parallax images */
-article {
+.article-container {
   min-height: 500px;
   padding: 50px 15%;
   background-color: #fbfbf8;
